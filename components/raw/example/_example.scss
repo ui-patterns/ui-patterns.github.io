@@ -1,0 +1,8 @@
+// example local variable
+$example-color: red;
+
+// using local and global variable
+.component-example {
+	border: 8px solid $example-color;
+	color:green;
+}

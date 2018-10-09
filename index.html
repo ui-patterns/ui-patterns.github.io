@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="themes/mandelbrot/favicon.ico" type="image/ico">
+
+<link rel="stylesheet" href="stylesheets/theme.css?cachebust=1.2.0" type="text/css">
+
+
+<title>Fedora UI - Fractal Components for Bootstrap | Fedora UI Fractal Components for Bootstrap</title>
+
+</head>
+<body>
+
+
+
+<div class="Frame" id="frame">
+
+    <div class="Frame-header">
+        <div class="Header">
+    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
+</svg>
+
+        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+</svg>
+
+    </button>
+    <a href="" class="Header-title" data-pjax>Fedora UI Fractal Components for Bootstrap</a>
+</div>
+
+    </div>
+
+    <div class="Frame-body" data-role="body">
+
+        <div class="Frame-panel Frame-panel--main" data-role="main">
+            <div class="Frame-inner" id="pjax-container">
+            
+
+<div class="Document">
+
+    <div class="Document-header">
+        
+        <h1 class="Document-title">Fedora UI - Fractal Components for Bootstrap</h1>
+        
+
+
+        
+    </div>
+
+    <div class="Document-content">
+
+    
+
+<div class="Prose">
+
+
+
+    
+    
+    <p>NOTE: this is just the preview of ongoing work and might contain incostistencies!</p>
+<p>This page can be edited with markdown: <code>docs/01-index.md</code>
+This is still pretty new and undergoing some work. 
+So things can change fast and you should not rely on it as an official reference.
+There is not alot of examples yet, 
+check out <a href="components/detail/nav.html">Nav</a> 
+and <a href="components/detail/background-images.html">Background images</a> 
+to get an idea on how the structure for components might be looking.</p>
+<p><a href="components/detail/masthead.html">Masthead</a> component needs some work because of the Sass mixin that does not seem to work.</p>
+<p>Anyone within Fedora community is welcome to contribute the changes. 
+The name of the project is temporary and the repository location will change and move somewhere else on Pagure.io
+Follow the discussion here: <a href="https://pagure.io/design/issue/618">https://pagure.io/design/issue/618</a> 
+and add your thoughts about it.</p>
+<p><strong>Fedora Fractal Components for Bootstrap</strong></p>
+<p>Fedora Bootstrap is a custom Bootstrap 4 build used for Fedora Community applications. 
+Fractal Build <a href="https://fractal.build/">https://fractal.build/</a> is a component framework for styleguide documentation.</p>
+<p>The built CSS and Javascript files are hosted on apps.fedoraproject.org for inclusion in Fedora Infrastructure apps. To include the most recent version of Fedora Bootstrap in your Fedora app, use the following lines in your HTML output: </p>
+<pre>
+&lt;link href="https://apps.fedoraproject.org/global/fedora-bootstrap-fonts/hack.css" type="text/css" rel="stylesheet" /&gt;
+&lt;link href="https://apps.fedoraproject.org/global/fedora-bootstrap-fonts/open-sans.css" type="text/css" rel="stylesheet" /&gt;
+&lt;link href="https://apps.fedoraproject.org/global/fedora-bootstrap-fonts/font-awesome.css" type="text/css" rel="stylesheet" /&gt;
+</pre>
+
+<p>If you don’t want to include from this location, you can download built versions of these files from the <a href="https://pagure.io/fedora-bootstrap/releases">Fedora Bootstrap pagure</a>.</p>
+<p>Fedora Bootstrap does not bundle jQuery as part of fedora-bootstrap.js. 
+You will have to include this seperately as part of the other JS imports in your application. </p>
+<p><strong>Fonts</strong></p>
+<p>Apps that use Fedora Bootstrap require you include 3 webfonts: Open Sans for general use, Hack for code and the like that need monospace, and FontAwesome for icons. 
+The fonts are also available on apps.fedoraproject.org for inclusion in Fedora Infra apps, and can be included like this: </p>
+<pre>
+&lt;link href="https://apps.fedoraproject.org/global/fedora-bootstrap-fonts/hack.css" type="text/css" rel="stylesheet" /&gt;
+&lt;link href="https://apps.fedoraproject.org/global/fedora-bootstrap-fonts/open-sans.css" type="text/css" rel="stylesheet" /&gt;
+&lt;link href="https://apps.fedoraproject.org/global/fedora-bootstrap-fonts/font-awesome.css" type="text/css" rel="stylesheet" /&gt;
+</pre>
+
+<p>If you don’t want to include from this location, you can download these files as they appear there from the <a href="https://pagure.io/fedora-bootstrap-fonts/releases">Fedora Bootstrap Fonts pagure</a>. </p>
+<p><strong>Basic Layout</strong></p>
+<p>All Fedora Bootstrap based apps follow a similar layout. This includes</p>
+<ul>
+<li>A masthead component at the top of the page for the app logo, top-level app navigation, and user login / menu</li>
+<li>an optional subheader for apps provide information about an item under the main app. For example, a project in pagure. The subheader also can include a tabbed navigation for the item, and actions</li>
+<li>a dark coloured body colour that should only be seen for the footer. This is to ensure the footer colour extends to the bottom of the browser window</li>
+<li>a bodycontent class that sets the colour of the main body of the document to white
+An example of this basic layout would be:</li>
+</ul>
+
+    
+
+
+</div>
+
+
+
+    </div>
+
+</div>
+
+
+            </div>
+        </div>
+
+        <div class="Frame-handle" data-role="frame-resize-handle"></div>
+        
+        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+            <nav class="Navigation">
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-docs">
+    <h3 class="Tree-title">documentation</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
+                <span>Overview</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="docs/bootstrap.html" data-pjax>
+                <span>Bootstrap</span>
+                
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-components">
+    <h3 class="Tree-title">components</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/background-images.html" data-pjax>
+                <span>Background Images</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-base">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Base</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/animation.html" data-pjax>
+                <span>Animation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/blocks.html" data-pjax>
+                <span>Blocks</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/box.html" data-pjax>
+                <span>Box</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/example.html" data-pjax>
+                <span>Example</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/footer.html" data-pjax>
+                <span>Footer</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/nav.html" data-pjax>
+                <span>Nav</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+</nav>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.0"></script>
+
+
+
+</body>
+</html>

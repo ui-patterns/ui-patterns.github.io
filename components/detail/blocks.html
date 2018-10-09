@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+
+<link rel="stylesheet" href="../../stylesheets/theme.css?cachebust=1.2.0" type="text/css">
+
+
+<title>Example component | Fedora UI Fractal Components for Bootstrap</title>
+
+</head>
+<body>
+
+
+
+<div class="Frame" id="frame">
+
+    <div class="Frame-header">
+        <div class="Header">
+    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
+</svg>
+
+        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+</svg>
+
+    </button>
+    <a href="../../index.html" class="Header-title" data-pjax>Fedora UI Fractal Components for Bootstrap</a>
+</div>
+
+    </div>
+
+    <div class="Frame-body" data-role="body">
+
+        <div class="Frame-panel Frame-panel--main" data-role="main">
+            <div class="Frame-inner" id="pjax-container">
+            
+
+
+    
+    
+
+<div class="Pen" data-behaviour="pen" id="pen-4c7b61840991404672463ed54c7a4fd9">
+
+    
+
+    <div class="Pen-panel Pen-header">
+    <h1 class="Pen-title">
+        <a class="Pen-previewLink" href="../preview/blocks.html" title="Component preview">
+            Example component
+            <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+
+        </a>
+    </h1>
+    
+
+<div class="Status Status--tag">
+
+<label class="Status-label" style="background-color: #FF9233; border-color: #FF9233;">WIP</label>
+
+</div>
+
+
+</div>
+
+
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-4c7b61840991404672463ed54c7a4fd9">
+    <div class="Preview-wrapper" data-role="resizer">
+        <div class="Preview-resizer">
+            
+             <iframe
+                class="Preview-iframe"
+                data-role="window"
+                src="../preview/blocks.html"
+                sandbox="allow-same-origin allow-scripts allow-forms"
+                 style=""
+                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
+            </iframe>
+        </div>
+        <div class="Preview-handle" data-role="resize-handle"></div>
+        <div class="Preview-overlay"></div>
+    </div>
+</div>
+
+
+    <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
+
+    <div class="Pen-panel Pen-info" data-role="info">
+    <div class="Browser" data-behaviour="browser" id="browser-4c7b61840991404672463ed54c7a4fd9">
+
+    
+
+<div class="Browser-controls">
+    <ul class="Browser-tabs">
+        
+        
+        <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
+            <a href="#browser-4c7b61840991404672463ed54c7a4fd9-panel-html">HTML</a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--view" data-role="tab">
+            <a href="#browser-4c7b61840991404672463ed54c7a4fd9-panel-view">View</a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--context" data-role="tab">
+            <a href="#browser-4c7b61840991404672463ed54c7a4fd9-panel-context">Context</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--resources" data-role="tab">
+            <a href="#browser-4c7b61840991404672463ed54c7a4fd9-panel-scss">Sass (scss)</a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-4c7b61840991404672463ed54c7a4fd9-panel-info">Info</a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-4c7b61840991404672463ed54c7a4fd9-panel-notes">Notes</a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+    
+    
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-4c7b61840991404672463ed54c7a4fd9-panel-html">
+    <code class="Code Code--lang-html">
+        
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"component-example"</span>&gt;</span>This example component takes a sass variable and interprets it along with component styles!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+        
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-4c7b61840991404672463ed54c7a4fd9-panel-view">
+    <code class="Code Code--lang-handlebars">
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"component-example"</span>&gt;</span></span><span class="hljs-template-variable">{{ text }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-4c7b61840991404672463ed54c7a4fd9-panel-context">
+    <code class="Code Code--lang-yaml">
+        
+            
+            <pre><span class="hljs-attr">text:</span> <span class="hljs-string">&gt;-</span>
+  <span class="hljs-string">This</span> <span class="hljs-string">example</span> <span class="hljs-string">component</span> <span class="hljs-string">takes</span> <span class="hljs-string">a</span> <span class="hljs-string">sass</span> <span class="hljs-string">variable</span> <span class="hljs-string">and</span> <span class="hljs-string">interprets</span> <span class="hljs-string">it</span> <span class="hljs-string">along</span> <span class="hljs-string">with</span>
+  <span class="hljs-string">component</span> <span class="hljs-string">styles!</span>
+</pre>
+            
+        
+    </code>
+</div>
+
+    
+    
+
+
+<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-4c7b61840991404672463ed54c7a4fd9-panel-scss">
+    <div class="FileBrowser">
+
+        <div class="FileBrowser-selectWrapper">
+            <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
+            <select class="FileBrowser-select" id="filebrowser-select">
+                
+                <option value="file-1335fb26e2d9675cf47553db7d0e2490">_blocks.scss</option>
+                
+            </select>
+        </div>
+
+        
+        <div class="FileBrowser-item is-active" id="file-1335fb26e2d9675cf47553db7d0e2490" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                                <pre><span class="hljs-comment">/*------------------------------------*\
+    #BLOCKS
+\*------------------------------------*/</span>
+<span class="hljs-comment">/**
+ * 1) Blocks are collections of text and/or images/media working together as a unit.
+ */</span>
+
+
+
+
+
+<span class="hljs-comment">/*------------------------------------*\
+	#HERO BLOCK
+\*------------------------------------*/</span>
+<span class="hljs-selector-class">.c-block-hero</span> {
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">position</span>: relative;
+}
+
+<span class="hljs-comment">/**
+ * Hero Image
+ * 1) This is the primary hero image that runs full-bleed across the layout
+ */</span>
+<span class="hljs-selector-class">.c-block-hero__img</span> {
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">max-height</span>: <span class="hljs-number">50vh</span>;
+    <span class="hljs-selector-tag">object</span>-fit: cover;
+}
+
+<span class="hljs-comment">/**
+ * Hero Headline
+ * 1) This sits overtop of the hero image when space permits
+ */</span>
+<span class="hljs-selector-class">.c-block-hero__headline</span> {
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color-dim-50</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-white</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2.6rem</span>;
+    <span class="hljs-attribute">transition</span>: all <span class="hljs-variable">$anim-speed-quick</span> <span class="hljs-variable">$anim-ease</span>;
+
+    @<span class="hljs-keyword">media</span> all and (min-width: <span class="hljs-variable">$bp-large</span>) {
+        <span class="hljs-attribute">position</span>: absolute;
+        <span class="hljs-attribute">top</span>: <span class="hljs-number">3rem</span>;
+        <span class="hljs-attribute">left</span>: <span class="hljs-number">1rem</span>;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">50%</span>;
+        <span class="hljs-attribute">border-radius</span>: <span class="hljs-variable">$border-radius</span>;
+    }
+
+    <span class="hljs-selector-class">.c-block-hero</span>:hover &amp;, <span class="hljs-selector-class">.c-block-hero</span>:focus &amp; {
+        <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color-gray-73</span>;
+    }
+    
+ }
+
+<span class="hljs-selector-class">.c-block-hero</span> {
+    <span class="hljs-selector-tag">h2</span> {
+      <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$font</span> <span class="hljs-meta">!important</span>;
+      <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">200</span>;
+      <span class="hljs-attribute">text-transform</span>: capitalize <span class="hljs-meta">!important</span>;
+    }
+}
+
+
+
+<span class="hljs-comment">/*------------------------------------*\
+	#MEDIA BLOCK
+\*------------------------------------*/</span>
+
+<span class="hljs-comment">/**
+ * 1) Media block contains an image (or some other media) on the left
+ * and text on the right.
+ * 2) For more info, read http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ */</span>
+<span class="hljs-selector-class">.c-block-media</span> {
+	<span class="hljs-attribute">display</span>: flex;
+	<span class="hljs-attribute">transition</span>: all <span class="hljs-variable">$anim-speed-quick</span> <span class="hljs-variable">$anim-ease</span>;
+
+	&amp;:hover, &amp;:focus {
+		<span class="hljs-selector-class">.c-block-media__headline</span> {
+			<span class="hljs-attribute">color</span>: <span class="hljs-variable">$brand-primary</span>;
+		}
+	}
+
+	&amp;<span class="hljs-selector-class">.small</span> {
+		<span class="hljs-attribute">font-size</span>: <span class="hljs-variable">$font-size-small-2</span>;
+	}
+}
+
+<span class="hljs-comment">/**
+ * Media Container
+ * 1) This is the container that holds the block image (or media)
+ */</span>
+<span class="hljs-selector-class">.c-block-media__media</span> {
+	<span class="hljs-attribute">width</span>: <span class="hljs-number">20%</span>;
+	<span class="hljs-attribute">max-width</span>: <span class="hljs-number">11em</span>;
+	<span class="hljs-attribute">margin-right</span>: <span class="hljs-number">1rem</span>;
+
+	<span class="hljs-selector-class">.c-block-media--small</span> &amp; {
+		<span class="hljs-attribute">max-width</span>: <span class="hljs-number">3.5em</span>;
+		<span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0.5rem</span>;
+	}
+
+	@<span class="hljs-keyword">media</span> all and (min-width: <span class="hljs-variable">$bp-med</span>) {
+		<span class="hljs-attribute">width</span>: <span class="hljs-number">50%</span>;
+		<span class="hljs-attribute">margin-right</span>: <span class="hljs-number">1.5rem</span>;
+	}
+}
+
+<span class="hljs-selector-class">.c-block-media__img</span> {
+	<span class="hljs-attribute">border-radius</span>: <span class="hljs-variable">$border-radius</span>;
+}
+
+<span class="hljs-selector-class">.c-block-media__headline</span> {
+	<span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0.2em</span>;
+	<span class="hljs-attribute">color</span>: <span class="hljs-variable">$brand-primary</span>;
+	<span class="hljs-attribute">transition</span>: all <span class="hljs-variable">$anim-speed-quick</span> <span class="hljs-variable">$anim-ease</span>;
+
+	<span class="hljs-selector-class">.c-block-media--small</span> &amp; {
+		<span class="hljs-attribute">font-size</span>: <span class="hljs-variable">$font-size-med</span>;
+	}
+}
+
+<span class="hljs-selector-class">.c-block-media__body</span> {
+	<span class="hljs-attribute">display</span>: flex;
+	<span class="hljs-attribute">flex-direction</span>: column;
+	<span class="hljs-attribute">justify-content</span>: center;
+	<span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;
+}
+
+<span class="hljs-selector-class">.c-block-media__excerpt</span> {
+	<span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-gray-35</span>;
+	<span class="hljs-attribute">transition</span>: all <span class="hljs-variable">$anim-speed-quick</span> <span class="hljs-variable">$anim-ease</span>;
+
+	<span class="hljs-selector-class">.c-block-media--small</span> &amp; {
+		<span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+		<span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.2</span>;
+	}
+}
+
+
+<span class="hljs-comment">/*------------------------------------*\
+	#TOUT BLOCK
+\*------------------------------------*/</span>
+
+<span class="hljs-comment">/**
+ * 1) The tout block contains an image and headline overlayed over the image.
+ */</span>
+<span class="hljs-selector-class">.c-block-tout</span> {
+    <span class="hljs-attribute">display</span>: inline-block;
+	<span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">$space-half</span>;
+	<span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">overflow</span>: hidden;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-variable">$border-radius</span>;
+}
+ 
+<span class="hljs-comment">/**
+ *  Tout image
+ */</span>
+ 
+ <span class="hljs-selector-class">.c-block-tout__img</span> {
+	 <span class="hljs-attribute">display</span>: block;
+ }
+
+<span class="hljs-comment">/**
+ *  Tout headline
+ */</span>
+<span class="hljs-selector-class">.c-block-tout__headline</span> {
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color-dim-50</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-white</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$pad-half</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.4rem</span>;
+    <span class="hljs-attribute">transition</span>: all <span class="hljs-variable">$anim-speed-quick</span> <span class="hljs-variable">$anim-ease</span>;
+
+    <span class="hljs-selector-class">.c-block-tout</span>:hover &amp;, <span class="hljs-selector-class">.c-block-tout</span>:focus &amp; {
+        <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">2rem</span>;
+    }
+}
+
+
+
+<span class="hljs-comment">/*------------------------------------*\
+	#TILE BLOCK
+\*------------------------------------*/</span>
+
+<span class="hljs-comment">/**
+ * 1) The tile block contains a span and headline overlayed on a background
+ */</span>
+<span class="hljs-selector-class">.c-block-tile</span> {
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">flex-direction</span>: column;
+    <span class="hljs-attribute">align-items</span>: center;
+    <span class="hljs-attribute">justify-content</span>: center;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color-dim-50</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-white</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-variable">$border-radius</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span> <span class="hljs-number">1em</span>;
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">overflow</span>: hidden;
+    <span class="hljs-attribute">transition</span>: all <span class="hljs-variable">$anim-speed-quick</span> <span class="hljs-variable">$anim-ease</span>;
+
+    &amp;:hover, &amp;:focus {
+        <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color-dim-70</span>;
+        <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-white</span>;
+    }
+
+    @<span class="hljs-keyword">media</span> all and (min-width: 55rem) {
+	    <span class="hljs-attribute">padding</span>: <span class="hljs-number">4em</span> <span class="hljs-number">1em</span>;
+    }
+}
+
+<span class="hljs-comment">/**
+ * Featured tile block
+ */</span>
+<span class="hljs-selector-class">.c-block-tile--featured</span> {
+	<span class="hljs-attribute">min-height</span>: <span class="hljs-number">200px</span>;
+}
+
+<span class="hljs-comment">/**
+ * Tile block value
+ */</span>
+<span class="hljs-selector-class">.c-block-tile__value</span> {
+	<span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5rem</span>;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.2</span>;
+
+	<span class="hljs-comment">/**
+	 * Tile value when inside featured tile parent selector
+	 */</span>
+	<span class="hljs-selector-class">.c-block-tile--featured</span> &amp; {
+	    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2.5rem</span>;
+
+	    @<span class="hljs-keyword">media</span> all and (min-width: <span class="hljs-variable">$bp-med</span>) {
+	    	<span class="hljs-attribute">font-size</span>: <span class="hljs-number">5rem</span>;
+		}
+    }
+
+    @<span class="hljs-keyword">media</span> all and (min-width: 55rem) {
+		<span class="hljs-attribute">font-size</span>: <span class="hljs-number">3rem</span>;
+    }
+}
+
+<span class="hljs-selector-class">.c-block-tile__label</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-gray-15</span>;
+    <span class="hljs-attribute">font-weight</span>: normal;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-variable">$font-size-med</span>;
+}
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/blocks/_blocks.scss"><span>/components/raw/blocks/_blocks.scss</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">components/blocks/_blocks.scss</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">4.9 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+    
+    <div class="Browser-panel" data-role="tab-panel" id="browser-4c7b61840991404672463ed54c7a4fd9-panel-info">
+    <ul class="Meta">
+        <li class="Meta-item">
+            <strong class="Meta-key">Handle:</strong>
+            <span class="Meta-value">@blocks</span>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Preview:</strong>
+            <span class="Meta-value">
+                <ul>
+                    <li><a data-no-pjax href="../preview/blocks.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                    <li><a data-no-pjax href="../render/blocks.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                </ul>
+            </span>
+        </li>
+        <li class="Meta-item">
+            <strong class="Meta-key">Filesystem Path:</strong>
+            <span class="Meta-value">components/blocks/blocks.hbs</span>
+        </li>
+        
+        
+    </ul>
+</div>
+
+    
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-4c7b61840991404672463ed54c7a4fd9-panel-notes">
+    <div class="Prose Prose--condensed">
+        
+        <p>hello world </p>
+
+        
+    </div>
+</div>
+
+    
+
+</div>
+
+</div>
+
+
+    
+
+</div>
+
+
+            </div>
+        </div>
+
+        <div class="Frame-handle" data-role="frame-resize-handle"></div>
+        
+        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+            <nav class="Navigation">
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-docs">
+    <h3 class="Tree-title">documentation</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../index.html" data-pjax>
+                <span>Overview</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/bootstrap.html" data-pjax>
+                <span>Bootstrap</span>
+                
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-components">
+    <h3 class="Tree-title">components</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="background-images.html" data-pjax>
+                <span>Background Images</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-base">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Base</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="animation.html" data-pjax>
+                <span>Animation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
+                <span>Blocks</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="box.html" data-pjax>
+                <span>Box</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="example.html" data-pjax>
+                <span>Example</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="footer.html" data-pjax>
+                <span>Footer</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="nav.html" data-pjax>
+                <span>Nav</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+</nav>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.0"></script>
+
+
+
+</body>
+</html>
